@@ -86,7 +86,18 @@ function findUserId(name,email){
   })
 };
 
+function deleteUser(id_delete){
+  User.findByIdAndDelete(id,function(err){
+    if(err){
+      console.log(err);
+    }else{
+      console.log("The user was successfully deleted.");
+    }
+  })
+};
+id_d="";
 findUserName(id);
 findUserEmail(id);
 findUserPassword(id);
 findUserId(name,email);
+deleteUser(id_d);
