@@ -1,10 +1,9 @@
-const mongoose = require('mongoose');
+const UserScripts = require("./js_scripts/UserScripts")
+const mongoose = require("mongoose")
 const admin="";  //admin name for database connection
-const password="";  //password of the given admin for databse connection
-const database="";    //name of database to connect to
-const id = "";   //id of the person you want to find name, email and password of
-const name= "";     //name of the person you want to find id of
-const email = "";  // email of the person you want to find id of
+const password="";  //password of the given admin for database connection
+const database="main";    //name of database to connect to
+const id = "5fe64207519828840031e059";   //id of user Jasmine, sample@gmail.com, 678910
 
 const connection = mongoose.connect('mongodb+srv://'+admin+':'+password+'@mes-1.0avol.mongodb.net/'+database+'?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -41,63 +40,9 @@ const User = mongoose.model("User", userSchema);    //creating model according t
 // user.save();
 
 
-
-function findUserName(id){
-  User.findById(id, 'Profile',function(err, member){
-    if(err){
-      console.log(err);
-    }else{
-      console.log(member.Profile.name);
-    }
-  })
-};
-
-
-
-
-function findUserEmail(id){
-  User.findById(id, 'Profile',function(err, member){
-    if(err){
-      console.log(err);
-    }else{
-      console.log(member.Profile.email);
-    }
-  })
-};
-
-function findUserPassword(id){
-  User.findById(id, 'Profile',function(err, member){
-    if(err){
-      console.log(err);
-    }else{
-      console.log(member.Profile.password);
-    }
-  })
-};
-
-
-function findUserId(name,email){
-  User.findOne({"Profile.email": email, "Profile.name": name}, 'Profile',function(err, member){
-    if(err){
-      console.log(err);
-    }else{
-      console.log(member._id);
-    }
-  })
-};
-
-function deleteUser(id_delete){
-  User.findByIdAndDelete(id,function(err){
-    if(err){
-      console.log(err);
-    }else{
-      console.log("The user was successfully deleted.");
-    }
-  })
-};
-id_d="";
-findUserName(id);
-findUserEmail(id);
-findUserPassword(id);
-findUserId(name,email);
-deleteUser(id_d);
+//UserScripts.createUser("Adrien", "myemail@gmail.com","safe_password" , User);
+UserScripts.findUserName(id, User);
+UserScripts.findUserEmail(id, User);
+UserScripts.findUserPassword(id, User);
+UserScripts.findUserId("myemail@gmail.com", User);  //Doesn't work in quick succession with createUser
+UserScripts.deleteUser("5fe7566f98fbb80ad443f079", User);
