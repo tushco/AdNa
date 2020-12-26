@@ -1,7 +1,7 @@
 const UserScripts = require("./js_scripts/UserScripts")
 const mongoose = require("mongoose")
-const admin="Website";  //admin name for database connection
-const password="q4gCRfkyzB4m85GR";  //password of the given admin for database connection
+const admin="";  //admin name for database connection
+const password="";  //password of the given admin for database connection
 const database="main";    //name of database to connect to
 const id = "5fe64207519828840031e059";   //id of user Jasmine, sample@gmail.com, 678910
 
