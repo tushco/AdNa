@@ -50,6 +50,7 @@ function findUserId(email, user_model){
 
 // **********************ADD FUNCTIONS
 
+
 function emailAvailable(email, model){
     var available;
     return model.findOne({"Profile.email": email}, 'Profile').then(function(hit){
@@ -112,7 +113,6 @@ async function createUser(name, email, password, model){
 
     });
 }
-
 
 // **********************END OF ADD FUNCTIONS
 // //********************UPDATE FUNCTIONS

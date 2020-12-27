@@ -4,6 +4,8 @@ mongoose.set('useFindAndModify', false);
 const admin="";  //admin name for database connection
 const password="";  //password of the given admin for databse connection
 const database="";    //name of database to connect to
+
+
 const connection = mongoose.connect('mongodb+srv://'+admin+':'+password+'@mes-1.0avol.mongodb.net/'+database+'?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 
