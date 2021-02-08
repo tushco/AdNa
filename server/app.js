@@ -1,9 +1,9 @@
-const UserScripts = require("./js_scripts/UserScripts")
+const UserScripts = require("../js_scripts/UserScripts")
 const mongoose = require('mongoose');
 mongoose.set('useFindAndModify', false);
-const admin="";  //admin name for database connection
-const password="";  //password of the given admin for databse connection
-const database="";    //name of database to connect to
+const admin="Adrien";  //admin name for database connection
+const password="KbucV4BpQvxhUrsq";  //password of the given admin for databse connection
+const database="main";    //name of database to connect to
 
 
 const connection = mongoose.connect('mongodb+srv://'+admin+':'+password+'@mes-1.0avol.mongodb.net/'+database+'?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
@@ -51,7 +51,7 @@ const Message = mongoose.model("Message", messageSchema);
 
 
 //UserScripts.createUser("Adrien", "myemail@gmail.com","safe_password" , User);
-// UserScripts.findUserName("5fe6460cf6c147df58f54666", User);
+UserScripts.findUserName("5fe6460cf6c147df58f54666", User);
 // UserScripts.findUserEmail("5fe6460cf6c147df58f54666", User);
 // UserScripts.findUserPassword("5fe6460cf6c147df58f54666", User);
 // UserScripts.findUserId("sampl@gmail.com", User);

@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "jest": "^23.6.0",
+    "mongodb": "^3.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8"
+  }
+}
