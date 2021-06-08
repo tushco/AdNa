@@ -1,4 +1,4 @@
-##Backend Directory
+## Backend Directory
 
 This is where the Database querying happens. Connections are made using mongoose, while querying functions are stored in
 [this js script](/js_scripts/UserScripts.js).
