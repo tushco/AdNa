@@ -1,5 +1,5 @@
-##Frontend Directory
-This is a [Next.js](https://nextjs.org/) created with the help of the [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) command.
+## Frontend Directory
+This is a frontend created with [Next.js](https://nextjs.org/), a framework for React.js. It was made with the help of the [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) command.
 
 ### Getting Started
 
@@ -23,3 +23,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deployment
+The Login page has been successfully deployed to Heroku. Follow [this link](https://ann-messaging.herokuapp.com/) to see the result for yourself!
